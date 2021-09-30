@@ -1,0 +1,10 @@
+import zipfile
+import os
+with zipfile.ZipFile("/Users/varvara/Downloads/main.zip", 'r') as zip_ref:
+    zip_ref.extractall("/Users/varvara/informatika/L_4")
+a = [ ]
+for current_dir, dirs, files in os.walk("/Users/varvara/informatika/L_4/main"):
+    for i in files:
+        if i[-3:] == ".py" and i not in a:
+            a.append(current_dir)
+print(sorted(a))
