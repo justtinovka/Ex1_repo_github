@@ -1,0 +1,6 @@
+def write_array(array, file_name):
+    a = '\n'.join(array)
+    with open(file_name, "w") as out:
+        out.write(a)
+array = ['qwertyuiop' , 'asdfghjkl' , 'zxcvbnm']
+write_array(array,"/Users/varvara/informatika/L_4/2.txt")
