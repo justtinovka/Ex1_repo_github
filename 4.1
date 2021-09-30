@@ -1,0 +1,9 @@
+with open("/Users/varvara/informatika/L_4/start.txt", "r") as file:
+    for line in file:
+        k = 0
+        while line[k] == ' ':
+            k+=1
+        z = -1
+        while line[z] ==' ':
+            z = z -1
+        print(line[k:z])
