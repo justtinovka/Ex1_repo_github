@@ -1,0 +1,9 @@
+import csv
+with open("/Users/varvara/table.csv", "r") as file:
+    reader = csv.reader(file,delimiter=';')
+    a = list(reader)
+    a.insert(4,[0,0,0,0,0,0])
+    for i in range(len(a)):
+        a[i].insert(4,0)
+    for row in a:
+        print(*row)
