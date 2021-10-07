@@ -1,0 +1,31 @@
+печатает числа но не в файл
+
+import sys
+import argparse
+
+
+def fib (num, pr=False):
+    s =[]
+    a1 = 1
+    a2 = 1
+    for i in range(num):
+        a1 = a2
+        a2 = a1 + a2
+        s.append(str(a1))
+    if pr == True:
+        return ' '.join(s)
+    else:
+        return a1
+
+
+def createParser():
+    parser = argparse.ArgumentParser()
+    parser.add_argument ('num', type = int)
+    parser.add_argument('-a', '--all', action='store_const', const=True)
+    return parser
+
+if __name__ == '__main__':
+    parser = createParser()
+    namespace = parser.parse_args()
+    print (fib(namespace.num, True))
+
