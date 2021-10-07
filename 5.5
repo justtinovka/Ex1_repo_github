@@ -1,0 +1,4 @@
+def swap(fun):
+    def out(*arguments, **name_arguments):
+        return fun(*arguments[::-1], **name_arguments)
+    return out
