@@ -4,12 +4,12 @@ import argparse
 
 def fib (num):
     if num == 0:
-        Fn = 0
+        a = 0
     elif num == 1:
-        Fn = 1
+        a = 1
     else:
-        Fn = fib(num-1) + fib(num-2)
-    return Fn
+        a = fib(num-1) + fib(num-2)
+    return a
 
 
 def createParser ():
