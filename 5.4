@@ -10,10 +10,10 @@ def count(s):
 
 def decorator(func):
     def out(s):
-        n = func(s)
-        if n == 0:
+        m = func(s)
+        if m == 0:
             print('Нет(')
-        if n > 10:
+        if m > 10:
             print('Очень много')
     return out
 
