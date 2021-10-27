@@ -1,0 +1,21 @@
+Реализуйте класс Point, необходимый для хранения координат точки на плоскости. 
+Дополните его интерфейсом взаимодействия с данными: вохможностью получить 
+и изменить значения полей используя методы (такие методы обычно называют get и set). (3 балла)
+
+class Point():
+
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def getx(self):
+        return self.x
+
+    def gety(self):
+        return self.y
+
+    def set_x(self, x_new):
+        self.x = x_new
+
+    def set_y(self, y_new):
+        self.y = y_new
