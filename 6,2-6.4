@@ -1,0 +1,51 @@
+Реализуйте абстрактный класс геометрической фигуры 'Shape'.
+Унаследуйте от него геометрическую фигуру четырехугольник, состоящую из 4 Point, а от него унаследуйте квадрат.
+Сделайте так, чтобы каждая из этих фигур переопределяла родительские методы вычисления площади и периметра. (4 балла)
+class Point():
+    def __init__(self):
+        self.p1 = p1
+        self.p2 = p2
+        self.p3 = p3
+        self.p4 = p4
+
+class Shape(object):
+    def area(self):
+        pass
+
+    def perimeter(self):
+        pass
+
+
+class Figure(Shape):
+    def __init__(self, p1, p2, p3, p4):
+        self.a = p1.distance(p2)
+        self.b = p2.distance(p3)
+        self.c = p3.distance(p4)
+        self.d = p4.distance(p1)
+        self.diag = p1.distance(p3)
+
+    def area(self):
+        a, b, c, d, diag = self.a, self.b, self.c, self.d, self.diag
+        p1 = (a + b + diag) / 2
+        p2 = (c + d + diag) / 2
+        s1 = (p1*(p1-a)*(p1-b)*(p1-diag))**0.5
+        s2 = (p2 * (p2 - c) * (p2 - d) * (p2 - diag)) ** 0.5
+        return s1+s2
+
+    def perimeter(self):
+        a, b, c, d = self.a, self.b, self.c, self.d
+        return a + b + c + d
+
+
+class Square(Figure):
+
+    def area(self):
+        return self.a ** 2
+
+    def perimeter(self):
+        return self.a * 4
+
+
+
+
+
